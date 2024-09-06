@@ -1,0 +1,84 @@
+/* General styles */
+nav {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+}
+
+.navbar, .sidebar {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar li, .sidebar li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.navbar a, .sidebar a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+}
+
+.navbar a:hover, .sidebar a:hover {
+    background-color: #555;
+}
+
+/* Sidebar styles */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    transition: left 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+}
+
+/* Checkbox hack to show/hide sidebar */
+#sidebaractive:checked ~ .sidebar {
+    left: 0;
+}
+
+/* Menu and close icons */
+.menu, .close {
+    display: none;
+    cursor: pointer;
+}
+
+.menu i, .close i {
+    font-size: 32px;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 700px) {
+    .hidethis {
+        display: none;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    #sidebaractive:checked ~ .sidebar {
+        left: 0;
+    }
+
+    #sidebaractive:checked ~ .navbar .menu {
+        display: none;
+    }
+
+    #sidebaractive:checked ~ .navbar .close {
+        display: block;
+    }
+}

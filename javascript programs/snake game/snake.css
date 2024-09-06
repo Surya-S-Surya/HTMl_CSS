@@ -1,0 +1,8 @@
+body{
+    font-family: Corbel;
+    text-align: center;
+}
+canvas{
+    box-shadow:brown  12px 12px 40px ;
+    color: rgba(65, 65, 14, 0.952);
+}
