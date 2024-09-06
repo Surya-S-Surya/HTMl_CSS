@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="main.js" defer></script>
+    <link rel="stylesheet" href="main.css">
+    <title>get gadget</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+</head>
+<body>
+
+    <div class="navigationbar">
+        <div class="mylogo">
+            <a href="#"><img src="Screenshot 2024-06-02 205054.png"></a>
+        </div>
+        <a class="logoname" style="color: #E08F24; font-size:32px; font-weight: 800;">
+            <label class="firstg" style="color: #905A14; font-size:52px; font-weight: 1000;">G</label>ET 
+            <label class="secondg" style="color: #905A14;font-size:52px; font-weight: 1000;">G</label>ADGET
+        </a>
+        <input type="text" class="searchbar" placeholder="Search GetGadGet.in" id="find">
+        <button class="searchbutton" onclick="submitSearch()"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <div class="navbarright">
+            <a class="logoright" href="cart.html">
+                <i class="fa-solid fa-cart-shopping"></i>
+
+            </a>
+           
+        </div>
+        
+
+    </div>
+    <div class="navigation2">
+        <button class="All" onclick="newbutton()">All</button>
+        <button class="bestseller" onclick="bestsellerbutton()">Best Seller</button>
+        <button class="mobiles" onclick="mobilebutton('Category: Mobile')">Mobiles</button>
+        <button class="laptops" onclick="laptopbutton()">Laptops</button>
+        <button class="headphone" onclick="headphonebutton()">Head Phones</button>
+        <button class="airpod" onclick="airpodsbutton()">Earbuds</button>
+        <button class="watch" onclick="watchbutton()">Watches</button>
+        <button class="accessory" onclick="accessoriesbutton()">Accessories</button>
+        <button class="camera" onclick="camerabutton()">Cameras</button>
+    </div>
+
+    <div class="i">
+        <div class="mobile">
+
+            <img src="mobiles/nokiamobile.png">
+            
+            <br>
+                <h4 class="namehere">Nokia 1100 | Long-Lasting Battery | <br>Snake Game Available!!</h4>
+                <h4  class="bestseller" style="color:blue;">Best Seller</h4>
+                <h3>Rs. 1,999 only</h3>
+                <h2 style="margin-bottom: 10px;">Rating: 9.8/10</h2>
+                <button class="addtocart" onclick="addtocart('Nokia 1100', 1999, 'mobiles/nokiamobile.png', 9.8)">Add to cart</button>
+        </div>
+        <div class="mobile">
+            <img src="mobiles/iphonemobile.png">
+            <br>           
+
+            <h4 class="namehere">Apple iPhone 15 (128 GB)-Black</h4>
+            <h3><a style="text-decoration: line-through; color: red; font-size: 14px;" >Rs 71,199</a> Rs. 69,999 only</h3>
+            <h4 class="bestseller"  style="color:blue;">Best Seller</h4>
+            <h2 style="margin-bottom: 10px;">Rating: 4.6/5</h2>
+            <button class="addtocart" onclick="addtocart('Apple iPhone 15', 69999, 'mobiles/iphonemobile.png', 4.6)">Add to cart</button>
+        </div>
+        
+        <div class="mobile">
+            <img src="mobiles/iqoomobile.png">
+            <br>           
+
+                <h4 class="namehere">iQOO 12 5G (Legend, 12GB RAM, 256GB Storage) | India's 1st Snapdragon® 8 Gen 3 Mobile Platform<br></h4>
+                <h3>Rs. 38,999 only</h3>
+                <h2 style="margin-bottom: 10px;">Rating: 4.3/5</h2>
+                <button class="addtocart" onclick="addtocart('iQOO 12 5G', 38999, 'mobiles/iqoomobile.png', 4.3)">Add to cart</button>
+        </div>
+        <div class="mobile">
+            <img src="mobiles/oneplusmobile.png">
+                <h4 class="namehere">OnePlus 11R 5G (Sonic Black, 8GB RAM, 128GB Storage)<br>
+                </h4> <h4 class="mobilecatagory">Category: Mobile</h4>
+                <h3><a style="text-decoration: line-through; color: red;font-size: 14px;">Rs 21,199</a> Rs. 20,999 only</h3>
+                <h2 style="margin-bottom: 10px;">Rating: 4.2/5</h2>
+                <button class="addtocart" onclick="addtocart('OnePlus 11R 5G',21999,'mobiles/oneplusmobile.png',4.2)">Add to cart</button>
+                
+            
+        </div>
+        <div class="mobile">
+            <img src="mobiles/oppomobile.png">
+                <h4 class="namehere">Oppo F25 Pro 5G (Lava Red, 8GB RAM, 128GB Storage) with No Cost EMI<br>
+                <h3>Rs. 23,999 only</h3>
+                <h2 style="margin-bottom: 10px;">Rating: 4.3/5</h2>
+                <button class="addtocart" onclick="addtocart('Oppo F25 Pro 5G',23999,'mobiles/oppomobile.png',4.3)">Add to cart</button>
+                
+        </div>
+        <div class="mobile">
+            <img src="mobiles/pocomobile.png">
+                <h4 class="namehere">POCO C65 Pastel Blue 4GB RAM 128GB ROM |<h4  class="bestseller" style="color:blue;">Best Seller</h4>
+                <h3>Rs. 6,799 only</h3>
+                <h2 style="margin-bottom: 10px;">Rating: 4.1/5</h2>
+                <button class="addtocart" onclick="addtocart('POCO C65',6799,'mobiles/pocomobile.png',4.1)">Add to cart</button>
+                
+        </div>
+        <div class="mobile">
+            <img src="mobiles/realmemobile.png">
+                <h4 class="namehere">realme 12 Pro 5G (Submarine Blue, 8GB RAM 256 GB Storage) <a  class="bestseller" style="color:blue;"> Best Seller</a>
+                <h3><a style="text-decoration: line-through; color: red;font-size: 14px;">Rs 27,499</a> Rs. 24,999 only</h3>
+                <h2 style="margin-bottom: 10px;">Rating: 4.7/5</h2>
+                <button class="addtocart" onclick="addtocart('Realme 12 Pro 5G',24999,'mobiles/realmemobile.png',4.7)">Add to cart</button>
+                
+        </div>
+        <div class="mobile">
+            <img src="mobiles/redmimobile.png">
+                <h4 class="namehere">Redmi 13C (Starshine Green, 4GB RAM, 128GB Storage) | 90Hz Display<br>
+                <h3><a style="text-decoration: line-through; color: red; font-size: 14px;">Rs 8,499</a> Rs. 7,699 only</h3>
+                <h2 style="margin-bottom: 10px;">Rating: 4.0/5</h2>
+                <button class="addtocart" onclick="addtocart('Redmi 13C',7699,'mobiles/redmimobile.png',4.0)">Add to cart</button>
+                
+        </div>
+        <div class="mobile">
+            <img src="mobiles/samsungmobile.png">
+                <h4 class="namehere">Samsung Galaxy S22 5G (Green, 8GB, 256GB Storage) | 1 stock left!!<br>
+                <h3>Rs. 41,999 only</h3>
+                <h2 style="margin-bottom: 10px;">Rating: 4.3/5</h2>
+                <button class="addtocart" onclick="addtocart('Samsung Galaxy S22 5G',41999,'mobiles/samsungmobile.png',4.3)">Add to cart</button>
+                
+        </div>
+        <div class="mobile">
+            <img src="mobiles/vivomobile.png">
+                <h4 class="namehere">Vivo V30 5G Smartphone, 8GB RAM 128GB Storage, Ocean Royal Blue<br>
+                <h3>Rs. 30,925 only</h3>
+                <h2 style="margin-bottom: 10px;">Rating: 4.1/5</h2>
+                <button class="addtocart" onclick="addtocart('Vivo V30 5G',30925,'mobiles/vivomobile.png',4.2)">Add to cart</button>
+                
+        </div>
+    
+        <div class="laptop">
+    
+            <img src="laptops/realme.png">
+                <h4 class="namehere">realme Book(Slim) Evo Core i5 11th Gen 1135G7 - (8 GB/512 GB SSD/Windows 10 Home) RMNB1002 Thin and Light Laptop (14 inch, Real Gray, 1.38 kg, with MS Office)
+                </h4>
+                <h3><a style="text-decoration: line-through; color: red; font-size: 14px;">Rs 69,999</a> Rs. 42,499 only</h3>
+                <h4 class="bestseller" style="color:blue;"> Best Seller</h4>
+                <h2>Rating: 3.9/5</h2>
+                <button class="addtocart" onclick="addtocart('Realme Book Slim',42999,'laptops/realme.png',4.2)">Add to cart</button>
+    
+        </div>
+        <div class="laptop">
+    
+            <img src="laptops/acer.png">
+                <h4 class="namehere">Acer Aspire Lite 12th Gen Intel Core i5-1235U Thin and Light Metal Laptop (Windows 11 Home/16GB RAM/512GB SSD/Intel Iris Xe Graphics/MSO) AL15-52, 39.62cm (15.6") Full HD Display, Steel Gray, 1.59 KG
+                </h4>
+                <h3><a style="text-decoration: line-through; color: red; font-size: 14px;">Rs 52,999</a> Rs. 32,499 only</h3>
+
+                <h2>Rating: 3.8/5</h2>
+                <button class="addtocart" onclick="addtocart('Acer Aspire Lite',32499,'laptops/acer.png',3.8)">Add to cart</button>
+    
+        </div>
+        <div class="laptop">
+    
+            <img src="laptops/asus.png">
+                <h4 class="namehere">ASUS ROG Strix Scar 17 SE, 17.3" (43.94 cms) 2K QHD 240Hz/3ms, Intel Core i9 12th Gen, 16GB RTX 3080 Ti Graphics, Gaming Laptop (32GB/4TB RAID 0 SSD/Windows 11/Office 2021/Black/3 Kg), G733CX-LL012WS
+                </h4>
+                <h3><a style="text-decoration: line-through; color: red; font-size: 14px;">Rs 4,79,990</a> Rs. 3,20,000 only</h3>
+                <h2>Rating: 3.5/5</h2>
+                <button class="addtocart" onclick="addtocart('ASUS ROG Strix Scar 17 SE',320999,'laptops/asus.png',3.5)">Add to cart</button>
+    
+        </div>
+        <div class="laptop">
+    
+            <img src="laptops/dell.png">
+                <h4 class="namehere">Dell G15-5525 Gaming Laptop, AMD R9-6900HX, 16GB DDR5, 1TB SSD, NVIDIA RTX 3060 (6GB GDDR6), 15.6" (39.62Cms) FHD WVA AG, 165 Hz 300 nits, Win 11+ MSO'21, Phantom Grey (D560896WIN9S, 2.51Kgs)
+                </h4>
+                <h3><a style="text-decoration: line-through; color: red; font-size: 14px;">Rs 1,90,925</a> Rs. 1,08,990 only</h3>
+                <h2>Rating: 2.7/5</h2>
+                <button class="addtocart" onclick="addtocart('Dell G15-5525 Gaming Laptop',108990,'laptops/dell.png',2.7)">Add to cart</button>
+    
+        </div>
+        <div class="laptop">
+    
+            <img src="laptops/hp.png">
+                <h4 class="namehere">HP [Windows 11 Home] 255 G8 Notebook, 15.6'' HD Display, AMD Athlon 3020e Processor, 8GB Memory, 256GB SSD, Wi-Fi, Bluetooth, Type-C Port, RJ-45 Port, Black
+                </h4>
+                <h3><a style="text-decoration: line-through; color: red; font-size: 14px;">Rs 27,000</a> Rs. 23,490 only</h3>
+                <h4 class="bestseller"  style="color:blue;"> Best Seller</h4>
+                <h2>Rating: 3.9/5</h2>
+                <button class="addtocart" onclick="addtocart('HP 255 GB Noteboook',23490,'laptops/hp.png',3.9)">Add to cart</button>
+    
+        </div>
+        <div class="laptop">
+    
+            <img src="laptops/lenovo.png">
+                <h4 class="namehere">Lenovo IdeaPad 1 AMD Ryzen 5 5500U 15.6" HD Thin and Light Laptop (16GB/512GB SSD/Windows 11 Home/MS Office 2021/Cloud Grey/1.61Kg), 82R400ERIN
+                </h4>
+                <h3><a style="text-decoration: line-through; color: red; font-size: 14px;">Rs 59,390</a> Rs. 39,990 only</h3>
+                <h4 class="bestseller"  style="color:blue;"> Best Seller</h4>
+                <h2>Rating: 3.4/5</h2>
+                <button class="addtocart" onclick="addtocart('Lenovo Ideapad 1',39990,'laptops/lenovo.png',3.4)">Add to cart</button>
+    
+        </div>
+        <div class="laptop">
+    
+            <img src="laptops/mac.png">
+                <h4 class="namehere">Apple MacBook Air Laptop M1 chip, 13.3-inch/33.74 cm Retina Display, 8GB RAM, 256GB SSD Storage, Backlit Keyboard, FaceTime HD Camera, Touch ID. Works with iPhone/iPad; Space Grey
+                </h4>
+                <h3><a style="text-decoration: line-through; color: red; font-size: 14px;">Rs 92,900</a> Rs. 71,990 only</h3>
+                <h4 class="bestseller"  style="color:blue;"> Best Seller</h4>
+                <h2>Rating: 4.7/5</h2>
+                <button class="addtocart" onclick="addtocart('Apple MacBook Air Laptop',71990,'laptops/mac.png',4.7)">Add to cart</button>
+    
+        </div>
+        <div class="laptop">
+    
+            <img src="laptops/microsoft.png">
+                <h4 class="namehere">Microsoft Laptop 4 - 15" inches Screen, AMD R7/Windows 10 Home/8GB RAM/256 GB SSD/ Platinum - (5UI-00049)
+                </h4>
+                <h3><a style="text-decoration: line-through; color: red; font-size: 14px;">Rs 1,50,999</a> Rs. 79,990 only</h3>
+                <h2>Rating: 3.0/5</h2>
+                <button class="addtocart" onclick="addtocart('Microsoft Laptop',150999,'laptops/microsoft.png',3.0)">Add to cart</button>
+    
+        </div>
+        <div class="laptop">
+    
+            <img src="laptops/victus.png">
+                <h4 class="namehere">HP Victus Windows 11 Home Gaming Laptop,AMD Ryzen 7 7840Hs Ai Powered,6Gb RTX 3050 Gpu,16.1-Inch (40.9 Cm),95W Tgp,Fhd,IPS,144Hz,16Gb Ddr5,1Tb Ssd,RGB Backlit Kb,B&O (Mso,Blue,2.29 Kg),S0089Ax
+                </h4>
+                <h3><a style="text-decoration: line-through; color: red; font-size: 14px;">Rs 99,527</a> Rs. 85,990 only</h3>
+                <h4 class="bestseller"  style="color:blue;"> Best Seller</h4>
+                <h2>Rating: 4.3/5</h2>
+                <button class="addtocart" onclick="addtocart('HP Victus',85990,'laptops/victus.png',4.3)">Add to cart</button>
+    
+        </div>
+        <div class="laptop">
+    
+            <img src="laptops/vivobook.png">
+                <h4 class="namehere">ASUS VivoBook 15 (2021) Thin and Light Laptop, Dual Core Intel Celeron N4020, 15.6-inch (39.62 cm) HD, (4GB RAM/256GB SSD/Integrated Graphics/Windows 11 Home/Transparent Silver/1.8 Kg)
+                </h4>
+                <h3><a style="text-decoration: line-through; color: red; font-size: 14px;">Rs 33,990</a> Rs. 19,499 only</h3>
+                <h4 class="bestseller"  style="color:blue;"> Best Seller</h4>
+                <h2>Rating: 4.0/5</h2>
+                <button class="addtocart" onclick="addtocart('ASUS Vivobook 15',19499,'laptops/vivobook.png',4.0)">Add to cart</button>
+    
+        </div>
+        
+
+
+        <div class="headphones">
+    
+            <img src="headphones/boat1.png">
+                <h4 class="namehere">boAt Rockerz 550 Over Ear Bluetooth Headphones with Upto 20 Hours Playback, 50MM Drivers, Soft Padded Ear Cushions and Physical Noise Isolation, Without Mic (Black)
+                </h4>
+                <h3><a style="text-decoration: line-through; color: red; font-size: 14px;">Rs 4,990</a> Rs. 2,499 only</h3>
+                <h4 class="bestseller"  style="color:blue;"> Best Seller</h4>
+                <h2>Rating: 4.1/5</h2>
+                <button class="addtocart" onclick="addtocart('boat Rockerz 550 Over Ear Bluetooth Headphones',2499,'headphones/boat1.png',4.1)">Add to cart</button>
+    
+        </div>
+        <div class="headphones">
+    
+            <img src="headphones/boat2.png">
+                <h4 class="namehere">boAt Rockerz 245 V2 Pro Wireless in Ear Neckband with Up to 30 Hrs Playtime, Enxᵀᴹ Tech, Asapᵀᴹ Charge, Beastᵀᴹ Mode, Dual Pairing, Magnetic Buds
+                </h4>
+                <h3><a style="text-decoration: line-through; color: red; font-size: 14px;">Rs 3,490</a> Rs. 1,099 only</h3>
+                <h2>Rating: 3.9/5</h2>
+                <button class="addtocart" onclick="addtocart('boat Rockerz 245 V2 Pro Wireless Neckband',1099,'headphones/boat2.png',3.9)">Add to cart</button>
+    
+        </div>
+        <div class="headphones">
+    
+            <img src="headphones/jbl1.png">
+                <h4 class="namehere">
+                    JBL Tune 510BT, On Ear Wireless Headphones with Mic, up to 40 Hours Playtime, Pure Bass, Quick Charging, Dual Pairing, Bluetooth 5.0 
+                </h4>
+                <h3><a style="text-decoration: line-through; color: red; font-size: 14px;">Rs 4,499</a> Rs. 2,799 only</h3>
+                <h2>Rating: 3.8/5</h2>
+                <button class="addtocart" onclick="addtocart('JBL Tune 510BT Wireless Headphones',2799,'headphones/jbl1.png',3.8)">Add to cart</button>
+    
+        </div>
+        <div class="headphones">
+    
+            <img src="headphones/jbl2.png">
+                <h4 class="namehere">JBL C50HI, Wired in Ear Headphones with Mic, One Button Multi-Function Remote, Lightweight & Comfortable fit
+                </h4>
+                <h3><a style="text-decoration: line-through; color: red; font-size: 14px;">Rs 690</a> Rs.499 only</h3>
+                <h2>Rating: 3.9/5</h2>
+                <button class="addtocart" onclick="addtocart('JBL C50 wired headphones',499,'headphones/jbl2.png',3,9)">Add to cart</button>
+    
+        </div>
+        <div class="headphones">
+    
+            <img src="headphones/oneplus1.png">
+                <h4 class="namehere">Oneplus Bullets Z2 Bluetooth Wireless in Ear Earphones with Mic, Bombastic Bass - 12.4 mm Drivers, 10 Mins Charge - 20 Hrs Music, 30 Hrs Battery Life, IP55 Dust and Water Resistant
+                </h4>
+                <h3><a style="text-decoration: line-through; color: red; font-size: 14px;">Rs 2,299</a> Rs. 1,394 only</h3>
+                <h4 class="bestseller"  style="color:blue;"> Best Seller</h4>
+                <h2>Rating: 4.2/5</h2>
+                <button class="addtocart" onclick="addtocart('Oneplus Bullet Z2 Wireless headphones',1394,'headphones/oneplus1.png',4.2)">Add to cart</button>
+    
+        </div>
+        <div class="headphones">
+    
+            <img src="headphones/oneplus2.png">
+                <h4 class="namehere">Oneplus Nord Wired Earphones with mic, 3.5mm Audio Jack, Enhanced bass with 9.2mm Dynamic Drivers, in-Ear Wired Earphone - Black
+                </h4>
+                <h3><a style="text-decoration: line-through; color: red; font-size: 14px;">Rs 1,290</a> Rs. 694 only</h3>
+                <h4  class="bestseller" style="color:blue;"> Best Seller</h4>
+                <h2>Rating: 4.1/5</h2>
+                <button class="addtocart" onclick="addtocart('Oneplus Nord wired headphones',694,'headphones/oneplus2.png',4.1)">Add to cart</button>
+    
+        </div>
+        <div class="headphones">
+    
+            <img src="headphones/sony1.png">
+                <h4 class="namehere">Sony WH-CH720N, Wireless Over-Ear Active Noise Cancellation Headphones with Mic, up to 35 Hours Playtime, Multi-Point Connection, App Support, AUX & Voice Assistant Support for Mobile Phones
+                </h4>
+                <h3><a style="text-decoration: line-through; color: red; font-size: 14px;">Rs 14,990</a> Rs. 9,990 only</h3>
+                <h2>Rating: 4.3/5</h2>
+                <button class="addtocart" onclick="addtocart('Sony WN-CH720N Wireless Noise Cancellation Headphones',9990,'headphones/sony1.png',4.3)">Add to cart</button>
+    
+        </div>
+        <div class="headphones">
+    
+            <img src="headphones/sony2.png">
+                <h4 class="namehere">Sony WI-C100 Wireless Headphones with Customizable Equalizer for Deep Bass & 25 Hrs Battery, DSEE-Upscale, Splash Proof, 360RA, Fast Pair, in-Ear Bluetooth Headset with mic for Phone Calls 
+                </h4>
+                <h3><a style="text-decoration: line-through; color: red; font-size: 14px;">Rs 2,790</a> Rs. 1,699 only</h3>
+                <h4  class="bestseller" style="color:blue;"> Best Seller</h4>
+                <h2>Rating: 3.7/5</h2>
+                <button class="addtocart" onclick="addtocart('Sony WI-C100 Wireless Headphones',1699,'headphones/sony2.png',3.7)">Add to cart</button>
+    
+        </div>
+        <div class="headphones">
+    
+            <img src="headphones/zebronics1.png">
+                <h4 class="namehere">ZEBRONICS Thunder Bluetooth 5.3 Wireless Over Ear Headphones with 60H Backup, Gaming Mode, Dual Pairing, ENC, AUX, Micro SD, Voice Assistant
+                </h4>
+                <h3><a style="text-decoration: line-through; color: red; font-size: 14px;">Rs 1,399</a> Rs. 799 only</h3>
+                <h4  class="bestseller" style="color:blue;"> Best Seller</h4>
+                <h2>Rating: 3.8/5</h2>
+                <button class="addtocart" onclick="addtocart('Zebronics Thunder Bluetooth 5.3 Wireless Headphones',799,'headphones/zebronics1.png',3.8)">Add to cart</button>
+    
+        </div>
+        <div class="headphones">
+    
+            <img src="headphones/zebronics2.png">
+                <h4 class="namehere">Zebronics Zeb-200HM Wired Headphones with Mic, Dual 3.5mm Connectors, Adjustable Headband for PC Computers/Laptop
+                </h4>
+                <h3><a style="text-decoration: line-through; color: red; font-size: 14px;">Rs 799</a> Rs. 499 only</h3>
+                <h4  class="bestseller" style="color:blue;"> Best Seller</h4>
+                <h2>Rating: 3.2/5</h2>
+                <button class="addtocart" onclick="addtocart('Zebribucs Zev-200HM Wired Headphones',499,'headphones/zebronics2.png',3.2)">Add to cart</button>
+    
+        </div>
+
+
+        <div class="airpods">
+    
+            <img src="airpods/boat1.png">
+                <h4 class="namehere">boAt 125 TWS Earbuds with 50 hrs Playtime,Quad Mics with ENxᵀᴹ Tech,ASAPᵀᴹ Charging
+                </h4>
+                <h3><a style="text-decoration: line-through; color: red; font-size: 14px;">Rs 4490</a> Rs. 999 only</h3>
+                <h2>Rating: 3.6/5</h2>
+                <button class="addtocart" onclick="addtocart('boAt 125 TWS Earbuds',999,'airpods/boat1.png',3.6)">Add to cart</button>
+    
+        </div>
+        <div class="airpods">
+    
+            <img src="airpods/boat2.png">
+                <h4 class="namehere">boAt Immortal 121 in Ear TWS Earbuds with Beast Mode(40ms Low Latency) for Gaming
+                </h4>
+                <h3><a style="text-decoration: line-through; color: red; font-size: 14px;">Rs 3499</a> Rs. 1299 only</h3>
+                <h4  class="bestseller" style="color:blue;"> Best Seller</h4>
+
+                <h2>Rating: 3.6/5</h2>
+                <button class="addtocart" onclick="addtocart('boAt Immortal 121 in Ear TWS Earbuds',1299,'airpods/boat2.png',3.7)">Add to cart</button>
+    
+        </div>
+        <div class="airpods">
+    
+            <img src="airpods/boult1.png">
+                <h4 class="namehere">Boult Audio X45 Truly Wireless in Ear Earbuds with 40H Playtime, 45ms Low Latency Gaming, 4 Clear Calling ENC Mic
+                </h4>
+                <h3><a style="text-decoration: line-through; color: red; font-size: 14px;">Rs 4999</a> Rs. 799 only</h3>
+                <h2>Rating: 3.6/5</h2>
+                <button class="addtocart" onclick="addtocart('Boult Audio X45',799,'airpods/boult1.png',3.0)">Add to cart</button>
+    
+        </div>
+        <div class="airpods">
+    
+            <img src="airpods/boult2.png">
+                <h4 class="namehere">Boult Audio UFO Truly Wireless in Ear earbuds with 48H Playtime, Built-in App Support, 45ms Low Latency Gaming
+                </h4>
+                <h3><a style="text-decoration: line-through; color: red; font-size: 14px;">Rs 3490</a> Rs. 1499 only</h3>
+                <h4  class="bestseller" style="color:blue;"> Best Seller</h4>
+
+                <h2>Rating: 4.3/5</h2>
+                <button class="addtocart" onclick="addtocart('boAt Airdopes 125 TWS Earbuds',1499,'airpods/boult2.png',4.3)">Add to cart</button>
+    
+        </div>
+        <div class="airpods">
+    
+            <img src="airpods/apple1.png">
+                <h4 class="namehere">Apple AirPods Pro (2nd Generation) with MagSafe Case (USB‑C) ​​​​​​​(White)
+                </h4>
+                <h3><a style="text-decoration: line-through; color: red; font-size: 14px;">Rs 24900</a> Rs. 22499 only</h3>
+                <h4  class="bestseller" style="color:blue;"> Best Seller</h4>
+
+                <h2>Rating: 4.4/5</h2>
+                <button class="addtocart" onclick="addtocart('Apple AirPods Pro 2nd Generation',22499,'airpods/apple1.png',4.4)">Add to cart</button>
+    
+        </div>
+        <div class="airpods">
+    
+            <img src="airpods/apple2.png">
+                <h4 class="namehere">Apple AirPods (2nd Generation) Case, WhiteApple AirPods (2nd Generation) Case, White
+                </h4>
+                <h3><a style="text-decoration: line-through; color: red; font-size: 14px;">Rs 14490</a> Rs. 11999 only</h3>
+                <h4  class="bestseller" style="color:blue;"> Best Seller</h4>
+
+                <h2>Rating: 4.4/5</h2>
+                <button class="addtocart" onclick="addtocart('Apple airpods 2nd Generation',11999,'airpods/apple2.png',4.4)">Add to cart</button>
+    
+        </div>
+        <div class="airpods">
+    
+            <img src="airpods/oneplus2.png">
+                <h4 class="namehere">OnePlus Buds 3 in Ear airpods TWS Bluetooth Earbuds with Upto 49dB Smart Adaptive Noise Cancellation,Hi-Res Sound Quality
+                </h4>
+                <h3><a style="text-decoration: line-through; color: red; font-size: 14px;">Rs 6490</a> Rs. 5498 only</h3>
+                <h4  class="bestseller" style="color:blue;"> Best Seller</h4>
+                <h2>Rating: 4.3/5</h2>
+                <button class="addtocart" onclick="addtocart('OnePlus Buds 3',5498,'airpods/oneplus2.png',4.3)">Add to cart</button>
+    
+        </div>
+        <div class="airpods">
+    
+            <img src="airpods/oneplus1.png">
+                <h4 class="namehere">OnePlus Nord Buds 2r True Wireless in Ear Earbuds with Mic
+                </h4>
+                <h3><a style="text-decoration: line-through; color: red; font-size: 14px;">Rs 2299</a> Rs. 1899 only</h3>
+                <h4  class="bestseller" style="color:blue;"> Best Seller</h4>
+                <h2>Rating: 4.2/5</h2>
+                <button class="addtocart" onclick="addtocart('OnePlus Nord Buds 2r',1899,'airpods/oneplus1.png',4.2)">Add to cart</button>
+    
+        </div>
+        <div class="airpods">
+    
+            <img src="airpods/zebronics1.png">
+                <h4 class="namehere">ZEBRONICS Zeb-Sound Bomb 1 TWS Earbuds with BT5.0, Up to 12H Playback, Touch Controls
+                </h4>
+                <h3><a style="text-decoration: line-through; color: red; font-size: 14px;">Rs 2499</a> Rs. 699 only</h3>
+
+                <h2>Rating: 3.6/5</h2>
+                <button class="addtocart" onclick="addtocart('ZEBRONICS Zeb-Sound Bomb 1',699,'airpods/zebronics1.png',3.6)">Add to cart</button>
+    
+        </div>
+        <div class="airpods">
+    
+            <img src="airpods/zebronics2.png">
+                <h4 class="namehere">ZEBRONICS New Launch Mist in-Ear Wireless Earbuds, with up-to 27 Hours Backup, Environmental Noise Cancellation (ENC), Gaming Mode
+                </h4>
+                <h3><a style="text-decoration: line-through; color: red; font-size: 14px;">Rs 3499</a> Rs. 799 only</h3>
+                <h4  class="bestseller" style="color:blue;"> Best Seller</h4>
+
+                <h2>Rating: 3.3/5</h2>
+                <button class="addtocart" onclick="addtocart('ZEBRONICS Mist',799,'airpods/zebronics2.png',3.3)">Add to cart</button>
+    
+        </div>
+
+
+        
+        <div class="watches">
+    
+            <img src="watches/apple1.png">
+                <h4 class="namehere">Apple Watch SE (2nd Gen) Smart Watch [GPS 44 mm] Smart Watch w/Starlight Aluminium Case & Starllight Sport Band.
+                </h4>
+                <h3><a style="text-decoration: line-through; color: red; font-size: 14px;">Rs 32499</a> Rs. 26882 only</h3>
+
+                <h2>Rating: 4.6/5</h2>
+                <button class="addtocart" onclick="addtocart('Apple Watch SE (2nd Gen)',26882,'watches/apple1.png',)">Add to cart</button>
+    
+        </div>
+        <div class="watches">
+    
+            <img src="watches/apple2.png">
+                <h4 class="namehere">
+                Apple Watch SE Pro (2nd Gen, 2023) Smatch Watch [GPS + Cellular 44mm] Smartwatch with Midnight Aluminum Case</h4>
+                <h3><a style="text-decoration: line-through; color: red; font-size: 14px;">Rs 37499</a> Rs. 35799 only</h3>
+
+                <h2>Rating: 4.3/5</h2>
+                <button class="addtocart" onclick="addtocart('Apple Watch SE Pro',35799,'watches/apple2.png',4.3)">Add to cart</button>
+    
+        </div>
+        <div class="watches">
+    
+            <img src="watches/apple3.png">
+                <h4 class="namehere">
+               Apple Watch Series 9 [GPS 45mm] Smart watch with Midnight Aluminum Case </h4>
+                <h3> Rs. 44900 only</h3>
+                <h4  class="bestseller" style="color:blue;"> Best Seller</h4>
+
+                <h2>Rating: 4.5/5</h2>
+                <button class="addtocart" onclick="addtocart('Apple watch series 9',44900,'watches/apple3.png',4.5)">Add to cart</button>
+    
+        </div>
+        <div class="watches">
+    
+            <img src="watches/casio1.png">
+                <h4 class="namehere">
+                Casio Vintage Digital Grey Dial Unisex A-158WA-1Q watch</h4>
+                <h3> Rs. 1799 only</h3>
+                <h4  class="bestseller" style="color:blue;"> Best Seller</h4>
+
+                <h2>Rating: 4.4/5</h2>
+                <button class="addtocart" onclick="addtocart('Casio Vintage Digital Watch',1799,'watches/casio1.png',4.4)">Add to cart</button>
+    
+        </div>
+        <div class="watches">
+    
+            <img src="watches/fastrack1.png">
+                <h4 class="namehere">
+               Fastrack Limitless Glide Advanced UltraVU HD Display Smart Watch </h4>
+                <h3><a style="text-decoration: line-through; color: red; font-size: 14px;">Rs 3499</a> Rs. 1499 only</h3>
+                <h4  class="bestseller" style="color:blue;"> Best Seller</h4>
+
+                <h2>Rating: 4.0/5</h2>
+                <button class="addtocart" onclick="addtocart('Fastrack Limitless Glide Advanced',1499,'watches/fastrack1.png',4.0)">Add to cart</button>
+    
+        </div>
+        <div class="watches">
+    
+            <img src="watches/fastrack2.png">
+                <h4 class="namehere">
+                Fastrack Stunners 4.0 Analog Watch for Men, Stainless Steel</h4>
+                <h3> Rs. 2389 only</h3>
+
+                <h2>Rating: 4.3/5</h2>
+                <button class="addtocart" onclick="addtocart('Fastrack Stunners 4.0 Analog Watch',2389,'watches/fastrack2.png',4.3)">Add to cart</button>
+    
+        </div>
+        <div class="watches">
+    
+            <img src="watches/fire1.png">
+                <h4 class="namehere">
+               Fire-Boltt Ninja Call Pro Plus 1.83" Smart Watch with Bluetooth Calling, AI Voice Assistance </h4>
+                <h3><a style="text-decoration: line-through; color: red; font-size: 14px;">Rs 19999</a> Rs. 1299 only</h3>
+                <h4  class="bestseller" style="color:blue;"> Best Seller</h4>
+
+                <h2>Rating: 4.1/5</h2>
+                <button class="addtocart" onclick="addtocart('Fire-Boltt Ninja Call Pro Plus',1299,'watches/fire1.png',4.1)">Add to cart</button>
+    
+        </div>
+        <div class="watches">
+    
+            <img src="watches/fire2.png">
+                <h4 class="namehere">
+                Fire-Boltt Asphalt Newly Launched Racing Edition Smart Watch 1.91</h4>
+                <h3><a style="text-decoration: line-through; color: red; font-size: 14px;">Rs 19999</a> Rs. 2499 only</h3>
+                <h4  class="bestseller" style="color:blue;"> Best Seller</h4>
+
+                <h2>Rating: 4.3/5</h2>
+                <button class="addtocart" onclick="addtocart('Fire-Boltt Asphalt',2499,'watches/fire2.png',4.3)">Add to cart</button>
+    
+        </div>
+        <div class="watches">
+    
+            <img src="watches/noise1.png">
+                <h4 class="namehere">
+               Noise Force Rugged & Sporty 1.32" Bluetooth Calling Smart Watch </h4>
+                <h3><a style="text-decoration: line-through; color: red; font-size: 14px;">Rs 5999</a> Rs. 1799 only</h3>
+
+                <h2>Rating: 3.9/5</h2>
+                <button class="addtocart" onclick="addtocart('Noise Force Rugged & Sporty',1799,'watches/noise1.png',3.9)">Add to cart</button>
+    
+        </div>
+        <div class="watches">
+    
+            <img src="watches/noise2.png">
+                <h4 class="namehere">
+               Noise Newly Launched Endeavour Rugged Design 1.46" AMOLED Display Smart Watch </h4>
+                <h3><a style="text-decoration: line-through; color: red; font-size: 14px;">Rs 7999</a> Rs. 2999 only</h3>
+                <h4  class="bestseller" style="color:blue;"> Best Seller</h4>
+
+                <h2>Rating: 4.3/5</h2>
+                <button class="addtocart" onclick="addtocart('Noise Endeavour Rugged Design',2999,'watches/noise2.png',4.3)">Add to cart</button>
+    
+        </div>
+        <div class="watches">
+    
+            <img src="watches/titan1.png">
+                <h4 class="namehere">
+              Titan Men Metal Silver White Dial Analog Watch -Nr1733Km03, Band Color-Rose Gold  </h4>
+                <h3> Rs. 7089 only</h3>
+
+                <h2>Rating:4.0 /5</h2>
+                <button class="addtocart" onclick="addtocart('Titan Men Metal Silver',7089,'watches/titan1.png',4.0)">Add to cart</button>
+    
+        </div>
+        <div class="watches">
+    
+            <img src="watches/titan2.png">
+                <h4 class="namehere">
+               Titan Neo Iv Black Dial Men's Analog Watch-NL1805NM01/NP1805NM01 </h4>
+                <h3>Rs. 7695 only</h3>
+                <h4  class="bestseller" style="color:blue;"> Best Seller</h4>
+
+                <h2>Rating: 4.4/5</h2>
+                <button class="addtocart" onclick="addtocart('TItan Neo Iv Black',7695,'watches/titan2.png',4.4)">Add to cart</button>
+    
+        </div>
+
+        
+
+
+    </div>
+</body>
+</html>

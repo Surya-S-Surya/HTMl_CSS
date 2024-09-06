@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="cartstyle.css">
+    <script type="text/javascript" src="main.js" defer></script>
+    <title>Your Cart</title>
+</head>
+
+<body>
+    <div class="navigationbar">
+        <div class="mylogo">
+            <a href="#"><img src="Screenshot 2024-06-02 205054.png" alt="Logo"></a>
+        </div>
+        <a class="logoname" style="color: #E08F24; font-size:32px; font-weight: 800;">
+            <label class="firstg" style="color: #905A14; font-size:52px; font-weight: 1000;">G</label>ET
+            <label class="secondg" style="color: #905A14;font-size:52px; font-weight: 1000;">G</label>ADGET
+        </a>
+        <div class="navbarright">
+            <a class="logoright" href="main.html">Buy More</a>
+        </div>
+    </div>
+    <div class="allcart" id="cart-items">
+    </div>
+    <div class="book">
+
+        <button id="confirm-booking" onclick="enterserver()">Confirm Booking</button>
+    </div>
+    <a href="main.html" id="noMatches" class="noMatches" style="    display: none;"  >Click here to place orders!!</a>
+    <div id="booking-form"></div>
+    <script>
+        function loadCartItems() {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            let cartItemsDiv = document.getElementById('cart-items');
+
+            if (cart.length === 0) {
+                cartItemsDiv.innerHTML = '<p style="font-size:22px; display:flex;justify-content:center;">No orders were placed!!</p>';
+                return;
+            }
+
+            cartItemsDiv.innerHTML = '';
+            cart.forEach((item, index) => {
+                cartItemsDiv.innerHTML += `
+                    <div class="cart-item">
+                        <img src="${item.image}" alt="${item.name}">
+                        <div class="cart-item-details">
+                            <h4>${item.name}</h4>
+                            <p>Price: Rs. ${item.price}</p>
+                            <p>Rating: ${item.rating}/5</p>
+                        </div>
+                        <div class="cart-item-actions">
+                            <button onclick="deleteCartItem(${index})">
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+                `;
+            });
+        }
+
+        function deleteCartItem(index) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.splice(index, 1);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            loadCartItems();
+        }
+
+        window.onload = loadCartItems;
+
+        
+
+    </script>
+    
+</body>
+
+</html>
