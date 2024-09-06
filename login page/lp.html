@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="lpcss.css"> 
+    <script type="text/javascript" src="lpjs.js"></script>
+</head>
+<body>
+   
+
+
+    <div class="interface">
+        <h1 >LOGIN HERE</h1>
+        <form name="myloginform" onsubmit="return loginscript()" action="lpsql.php" method="POST">
+            
+            <p>
+                <i class="fa-solid fa-user"></i>
+                  Username
+                </p>
+                <input type="text" name="loginusername" placeholder="Enter Username"><br>
+            
+                <p>
+                    <i class="fa-solid fa-lock"></i>  
+                    Password </p>
+            
+                    <input type="password" name="loginpass" placeholder="Enter Password">
+    
+            <div id="errorloginbox" style="font-family: sans-serif; color:rgb(255, 30, 30);font-style: oblique;">
+     
+            </div>
+            
+            
+            
+            <input type="submit" name="loginsubmit" value="Login">
+            
+            <br>
+            
+            <a class="newreg" href="rp.html">Doesn't have an account? Click here!</a>
+        </form>
+    </div>
+
+    
+</body>
+</html>

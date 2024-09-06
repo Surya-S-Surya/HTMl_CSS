@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="rpcss.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script type="text/javascript" src="rpjs.js"></script>
+</head>
+<body>
+     
+    <div class="interface">
+        <h1>REGISTER HERE</h1>
+        <form name="myregisterform" onsubmit="return registerscript()" action="rpsql.php" method="post">
+            <p><i class="fa-solid fa-user"></i>
+                  Username</p>
+            <input type="text" name="username" placeholder="Enter Username" style="padding-left: 5px;"><br>
+            <p><i class="fa-solid fa-envelope"></i>
+                 E-Mail </p>
+            <input type="email" name="email" placeholder="Enter E-Mail" style="padding-left: 5px;"><br>
+            <p><i class="fa-solid fa-lock"></i>  Password </p>
+            
+            <input type="password" name="pass" placeholder="Enter Password" style="padding-left: 5px;">
+            <br>
+            <p><i class="fa-solid fa-lock"></i> Confirm Password </p>
+            
+            <input type="password" name="passwordagain" placeholder="Enter Password again" style="padding-left: 5px;">
+            <br>
+            <div id="errorregbox" style="font-family:sans-serif;color: red; font-style: oblique;">
+            </div>
+            
+            <input type="submit" name="sqlregsubmit" value="Register">
+            <br>
+            <a class="newlogin" href="lp.html">Already have an account? Click here!</a>
+        </form>
+    </div>
+</body>
+</html>
